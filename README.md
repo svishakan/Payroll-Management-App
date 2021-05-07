@@ -1,4 +1,4 @@
-# Payroll Management App
+# Payroll Management Application
 
 Contains code and documentation for a simple Payroll Management Application done for my end semester examinations for the OOAD Lab.
 
@@ -19,3 +19,7 @@ You can run the application in your localhost machine by doing the following:
     - ` creds = Creds(userid="admin", password="admin") `
 7. Close the Python shell and run the app with:
     - ` python app.py `
+
+---
+
+UML Diagrams were drawn to facilitate the implementation process and to better conceptualize the logic behind the implementation.
