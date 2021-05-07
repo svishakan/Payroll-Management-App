@@ -13,9 +13,9 @@ You can run the application in your localhost machine by doing the following:
 
 1. Clone this repository.
 2. Open a Terminal in the project folder.
-3. Install the required dependencies: `pip install Flask Flask-SQLAlchemy`.
+3. Install the required dependencies: ` pip install Flask Flask-SQLAlchemy `
 4. Have MySQL installed in your system, or change the database URI in app.py to sqlite:///
-5. Change the database URI for your configuration `mysql://<user>:<password>@localhost/<database>`.
+5. Change the database URI for your configuration ` mysql://<user>:<password>@localhost/<database> `
 6. Open the Python shell and perform the following: 
     - ` from app import * `
     - ` db.create_all() `
