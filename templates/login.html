@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block head %}
+<title>PMS Portal</title>
+{% endblock %}
+
+{% block body %}
+<h1 class="titleText">Welcome to Payroll Management System</h1>
+<hr>
+<h2 class="titleText">Login Portal</h2><br><br>
+<form align="center" class="reg-page" method="POST">
+    <label for="uname">Username:</label>
+    <input type="text" name="uname" id="uname" required/><br><br>
+    <label for="pwd">Password:</label>
+    <input type="password" name="pwd" id="pwd" required/><br><br>
+    <input type="submit" value="Login" id="button" class="btn" />
+</form>
+{% endblock %}

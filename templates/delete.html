@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block head %}
+<title>PMS - Delete Employee</title>
+{% endblock %}
+
+{% block body %}
+<h1 class="titleText">Payroll Management System</h1>
+<hr>
+<h2 class="titleText">Delete Employee</h1>
+    <br><br>
+
+    <div class="reg-page">
+        <form name="regform" id="regform" method="POST">
+            <label for="eid">Employee ID</label><br>
+            <input type="text" id="eid" name="eid" placeholder="P2008" size="10" required pattern="^P[0-9]+$"
+                title="Enter in the specified format">
+            <br><br>
+
+            <input type="submit" class="btn" name="Submit" id="Submit" value="Delete"></input><br>
+            <input type="reset" class="btn" name="Reset" id="Reset" value="Clear All"></input>
+        </form>
+    </div>
+{% endblock %}

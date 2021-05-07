@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block head %}
+<title>PMS - Add Employee</title>
+{% endblock %}
+
+{% block body %}
+<h1 class="titleText">Payroll Management System</h1>
+<hr>
+<h2 class="titleText">Add A Record</h1>
+    <br><br>
+
+    <div class="reg-page">
+        <form name="regform" id="regform" method="POST">
+            <label for="id">Employee ID</label><br>
+            <input type="text" id="id" name="id" placeholder="P2008" size="10" required pattern="^P[0-9]+$"
+                title="Enter in the specified format">
+            <br><br>
+
+            <label for="pname">Name</label><br>
+            <input type="text" id="pname" name="pname" placeholder="John Doe" size="40" required pattern="^[a-zA-Z\s]+$"
+                title="Enter English alphabets only">
+            <br><br>
+
+            <label for="age">Age</label><br>
+            <input type="number" id="age" name="age" min="1" max="120" step="1" placeholder="21" required>
+            <br><br>
+
+
+            <label>Gender</label>
+            <br>
+            <input type="radio" id="male" name="gender" value="Male" required>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="Female" required>
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="Other" required>
+            <label for="other">Other</label>
+
+            <br><br>
+
+            <label for="job">Designation</label><br>
+            <select id="job" name="job" required>
+                <option>Trainee</option>
+                <option>Team Leader</option>
+                <option>Manager</option>
+                <option>HR</option>
+            </select>
+            <br><br>
+
+            <label for="addr">Address</label><br>
+            <textarea cols="30" rows="3" id="addr" name="addr" required></textarea>
+            <br><br>
+
+            <label for="phone">Phone Number</label><br>
+            <input type="text" id="phone" name="phone" placeholder="1234567890" size="20" required>
+            <br><br>
+
+            <label for="doj">Date of Join</label><br>
+            <input type="date" id="doj" name="doj" required><br><br>
+
+            <input type="submit" class="btn" name="Submit" id="Submit" value="Register"></input><br>
+            <input type="reset" class="btn" name="Reset" id="Reset" value="Clear All"></input>
+        </form>
+    </div>
+{% endblock %}

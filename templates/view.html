@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% block head %}
+<title>Employee Details</title>
+{% endblock %}
+
+{% block body %}
+<h1 class='titleText'>Employee Details</h1>
+<hr><br>
+{% if payslip == False %}
+{% if employees|length < 1 %} <h4 class='titleText'>There are no employees in the database.</h4>
+    {% else %}
+    {% if vertical == False %}
+    <table align='center'>
+        <tr>
+            <th>Employee ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Designation</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Date of Join</th>
+        </tr>
+        {% for emp in employees %}
+        <tr>
+            <td>{{emp.id}}</td>
+            <td>{{emp.ename}}</td>
+            <td>{{emp.age}}</td>
+            <td>{{emp.gender}}</td>
+            <td>{{emp.job}}</td>
+            <td>{{emp.address}}</td>
+            <td>{{emp.phone}}</td>
+            <td>{{emp.doj.date()}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <table align="center">
+        <tr>
+            <th>Employee ID</th>
+            <td>{{employees[0].id}}</td>
+        </tr>
+        <tr>
+            <th>Name</th>
+            <td>{{employees[0].ename}}</td>
+        </tr>
+        <tr>
+            <th>Age</th>
+            <td>{{employees[0].age}}</td>
+        </tr>
+        <tr>
+            <th>Gender</th>
+            <td>{{employees[0].gender}}</td>
+        </tr>
+        <tr>
+            <th>Designation</th>
+            <td>{{employees[0].job}}</td>
+        </tr>
+        <tr>
+            <th>Address</th>
+            <td>{{employees[0].address}}</td>
+        </tr>
+        <tr>
+            <th>Phone</th>
+            <td>{{employees[0].phone}}</td>
+        </tr>
+        <tr>
+            <th>Date of Join</th>
+            <td>{{employees[0].doj.date()}}</td>
+        </tr>
+    </table>
+    {% endif %}
+    {% endif %}
+    {% else %}
+    <table align="center">
+        <tr>
+            <th>Basic Pay</th>
+            <td>{{employees[0].bpay}}</td>
+        </tr>
+        <tr>
+            <th>DA</th>
+            <td>{{employees[0].da}}</td>
+        </tr>
+        <tr>
+            <th>HRA</th>
+            <td>{{employees[0].hra}}</td>
+        </tr>
+        <tr>
+            <th>Provident Fund</th>
+            <td>{{employees[0].pf}}</td>
+        </tr>
+        <tr>
+            <th>Deductions</th>
+            <td>{{employees[0].dedn}}</td>
+        </tr>
+        <tr>
+            <th>Gross Pay</th>
+            <td>{{employees[0].gpay}}</td>
+        </tr>
+    </table>
+{%endif %}
+{% endblock %}

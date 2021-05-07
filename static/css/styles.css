@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Sanchez&display=swap");
+
+body {
+    background: rgb(143, 161, 255);
+    background: radial-gradient(
+        circle,
+        rgba(143, 161, 255, 1) 0%,
+        rgba(255, 103, 241, 1) 100%
+    );
+    font-family: "Sanchez", serif;
+}
+
+.titleText,
+.responseText {
+    text-align: center;
+}
+
+.reg-page {
+    width: 500px;
+    position: relative;
+    z-index: 1;
+    background: #ffffff;
+    max-width: 500px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: left;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.reg-page input,
+.reg-page textarea,
+.reg-page select {
+    outline: 0;
+    background: #f2f2f2;
+    width: 100;
+    border: 0;
+    margin: 15px 0px 15px 40px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: "Sanchez", serif;
+}
+
+.reg-page label {
+    font-weight: 650;
+}
+
+.reg-page textarea {
+    resize: none;
+}
+
+.reg-page .btn {
+    margin-left: 140px;
+    font-family: "Sanchez", serif;
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+    outline: 0;
+    background: #2a9df4;
+    width: 200px;
+    border: 0;
+    padding: 15px;
+    color: #ffffff;
+    transition: all 0.3 ease;
+    cursor: pointer;
+    user-select: none;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+    font-weight: bold;
+    background: #187bcd;
+}
+
+footer {
+    color: black;
+    font-weight: bold;
+    border-top: 3px solid black;
+    padding: 5px 5px 5px 5px;
+    text-align: center;
+    width: 100%;
+}
+
+table,
+td,
+th {
+    font-size: 25px;
+    border: 2px solid black;
+    padding: 5px;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+table {
+    width: 75%;
+}
+
+tr:hover {
+    background-color: azure;
+}
+
+.links {
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
+
+.links:hover {
+    font-weight: bold;
+}

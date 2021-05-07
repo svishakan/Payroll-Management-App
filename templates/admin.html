@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block head %}
+<title>PMS Admin</title>
+{% endblock %}
+
+{% block body %}
+<h1 class="titleText">Payroll Management System</h1>
+<hr>
+<h2 class="titleText">Admin Navigation Menu</h2><br><br>
+<div align="center" class="reg-page">
+    <button class="btn" onclick="window.open('/add')">Add An Employee</button><br><br>
+    <button class="btn" onclick="window.open('/credit')">Credit Salary</button><br><br>
+    <button class="btn" onclick="window.open('/viewrecords')">View Employees</button><br><br>
+    <button class="btn" onclick="window.open('/delete')">Delete Employee</button><br><br>
+    <button class="btn" onclick="window.open('/update')">Update Employee Details</button><br><br>
+    <button class="btn" onclick="logoutUser()">Logout</button><br><br>
+</div>
+
+<script>
+    logoutUser = () => {
+        //redirect to home page
+        location.href = "/";
+    }
+</script>
+{% endblock %}
