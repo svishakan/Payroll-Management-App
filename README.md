@@ -17,6 +17,8 @@ You can run the application in your localhost machine by doing the following:
     - ` from app import * `
     - ` db.create_all() `
     - ` creds = Creds(userid="admin", password="admin") `
+    - ` db.session.add(creds) `
+    - ` db.session.commit() `
 7. Close the Python shell and run the app with:
     - ` python app.py `
 
